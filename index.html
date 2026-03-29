@@ -66,14 +66,18 @@
             <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
             <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
-        <button id="menu-btn" class="md:hidden text-white"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"></path></svg></button>
+        <button id="menu-btn" class="md:hidden text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"></path></svg>
+        </button>
     </nav>
 
     <div id="mobile-menu" class="fixed inset-0 bg-black z-[110] flex flex-col items-center justify-center gap-10 md:hidden uppercase font-bold tracking-widest text-xl">
         <button id="close-btn" class="absolute top-8 right-8 text-white text-4xl">&times;</button>
+        <a href="#hero" class="mobile-link">Home</a>
         <a href="#showreel" class="mobile-link">Showreel</a>
         <a href="#motion" class="mobile-link">Motion Graphics</a>
         <a href="#shortfilm" class="mobile-link">Archive</a>
+        <a href="#skills" class="mobile-link">Skills</a>
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
@@ -115,18 +119,10 @@
         <div class="max-w-6xl mx-auto text-center">
             <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Motion Graphics Archive</h3>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card aspect-video" data-aos="fade-up">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/sP3aju77Yl8" allowfullscreen></iframe>
-                </div>
-                <div class="glass-card aspect-video" data-aos="fade-up" data-aos-delay="100">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/iGl8bOm7M_A" allowfullscreen></iframe>
-                </div>
-                <div class="glass-card aspect-video" data-aos="fade-up">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/X5adAj8EDV8" allowfullscreen></iframe>
-                </div>
-                <div class="glass-card aspect-video" data-aos="fade-up" data-aos-delay="100">
-                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/4k-Zrnzrx-o" allowfullscreen></iframe>
-                </div>
+                <div class="glass-card aspect-video" data-aos="fade-up"><iframe class="w-full h-full" src="https://www.youtube.com/embed/sP3aju77Yl8" allowfullscreen></iframe></div>
+                <div class="glass-card aspect-video" data-aos="fade-up" data-aos-delay="100"><iframe class="w-full h-full" src="https://www.youtube.com/embed/iGl8bOm7M_A" allowfullscreen></iframe></div>
+                <div class="glass-card aspect-video" data-aos="fade-up"><iframe class="w-full h-full" src="https://www.youtube.com/embed/X5adAj8EDV8" allowfullscreen></iframe></div>
+                <div class="glass-card aspect-video" data-aos="fade-up" data-aos-delay="100"><iframe class="w-full h-full" src="https://www.youtube.com/embed/4k-Zrnzrx-o" allowfullscreen></iframe></div>
             </div>
         </div>
     </section>
@@ -164,9 +160,9 @@
             <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Let's Create Together</h3>
             <div class="glass-card p-10 md:p-16 text-center" data-aos="zoom-in">
                 <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                    <div class="flex flex-col"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Your Name</label><input type="text" placeholder="NAME" class="p-4 rounded-xl text-xs font-bold tracking-widest"></div>
-                    <div class="flex flex-col"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Email</label><input type="email" placeholder="EMAIL" class="p-4 rounded-xl text-xs font-bold tracking-widest"></div>
-                    <div class="flex flex-col md:col-span-2"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Project Vision</label><textarea rows="4" placeholder="MESSAGE..." class="p-4 rounded-xl text-xs font-bold tracking-widest resize-none"></textarea></div>
+                    <div class="flex flex-col"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Your Name</label><input type="text" placeholder="NAME" class="p-4 rounded-xl text-xs font-bold tracking-widest outline-none"></div>
+                    <div class="flex flex-col"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Email</label><input type="email" placeholder="EMAIL" class="p-4 rounded-xl text-xs font-bold tracking-widest outline-none"></div>
+                    <div class="flex flex-col md:col-span-2"><label class="text-[9px] font-black uppercase tracking-widest mb-2 text-zinc-500 ml-2">Project Vision</label><textarea rows="4" placeholder="MESSAGE..." class="p-4 rounded-xl text-xs font-bold tracking-widest resize-none outline-none"></textarea></div>
                     <div class="md:col-span-2 mt-6 text-center"><button type="submit" class="btn-accent w-full md:w-auto">Send Message</button></div>
                 </form>
             </div>
@@ -181,9 +177,19 @@
     <script>
         AOS.init({ duration: 1000, once: true });
         const menuBtn = document.getElementById('menu-btn'), closeBtn = document.getElementById('close-btn'), mobileMenu = document.getElementById('mobile-menu'), mobileLinks = document.querySelectorAll('.mobile-link');
-        menuBtn.onclick = () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; };
-        const close = () => { mobileMenu.classList.remove('active'); document.body.style.overflow = 'auto'; };
-        closeBtn.onclick = close; mobileLinks.forEach(l => l.onclick = close);
+        
+        menuBtn.onclick = () => { 
+            mobileMenu.classList.add('active'); 
+            document.body.style.overflow = 'hidden'; 
+        };
+        
+        const close = () => { 
+            mobileMenu.classList.remove('active'); 
+            document.body.style.overflow = 'auto'; 
+        };
+        
+        closeBtn.onclick = close; 
+        mobileLinks.forEach(l => l.onclick = close);
     </script>
 </body>
 </html>
