@@ -62,8 +62,9 @@
         <div class="hidden md:flex gap-10 text-[10px] uppercase font-bold tracking-[0.3em] opacity-70">
             <a href="#hero" class="hover:text-blue-400 transition">Home</a>
             <a href="#showreel" class="hover:text-blue-400 transition">Showreel</a>
-            <a href="#narrative" class="hover:text-blue-400 transition">Films & Edits</a>
+            <a href="#shortfilm" class="hover:text-blue-400 transition">Short Film</a>
             <a href="#motion" class="hover:text-blue-400 transition">Motion</a>
+            <a href="#editing" class="hover:text-blue-400 transition">Editing</a>
             <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
         <button id="menu-btn" class="md:hidden text-white"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-width="1.5" stroke-linecap="round" stroke="white"/></svg></button>
@@ -73,8 +74,9 @@
         <button id="close-btn" class="absolute top-8 right-8 text-white text-4xl">&times;</button>
         <a href="#hero" class="mobile-link">Home</a>
         <a href="#showreel" class="mobile-link">Showreel</a>
-        <a href="#narrative" class="mobile-link">Films & Edits</a>
+        <a href="#shortfilm" class="mobile-link">Short Film</a>
         <a href="#motion" class="mobile-link">Motion</a>
+        <a href="#editing" class="mobile-link">Editing</a>
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
@@ -90,8 +92,8 @@
     </section>
 
     <section id="showreel" class="py-24 px-6 bg-zinc-950/40">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Cinematic Showreels</h3>
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic" data-aos="fade-up">Official Showreels</h3>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="glass-card aspect-video" data-aos="fade-right"><iframe src="https://www.youtube.com/embed/1Yx-6YprltU" allowfullscreen></iframe></div>
                 <div class="glass-card aspect-video" data-aos="fade-left"><iframe src="https://www.youtube.com/embed/Ys1rrAOm1EE" allowfullscreen></iframe></div>
@@ -99,34 +101,27 @@
         </div>
     </section>
 
-    <section id="narrative" class="py-24 px-6 border-b border-white/5">
-        <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic" data-aos="fade-up">Narrative & Creative Edits</h3>
-            
-            <div class="glass-card p-3 shadow-2xl mb-16" data-aos="zoom-in">
+    <section id="shortfilm" class="py-24 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic" data-aos="fade-up">Narrative Feature</h3>
+            <div class="glass-card p-3 shadow-2xl" data-aos="zoom-in">
                 <div class="aspect-video">
                     <iframe src="https://www.youtube.com/embed/vx8ihMXQ1aE" allowfullscreen></iframe>
                 </div>
                 <div class="p-8 md:p-12 border-t border-white/5">
-                    <h4 class="hero-title text-3xl md:text-6xl font-black uppercase italic tracking-tighter">ANONYMOUS</h4>
-                    <p class="text-blue-500 text-xs font-bold mt-2 uppercase tracking-[0.5em]">Short Film Project</p>
+                    <h4 class="hero-title text-3xl md:text-6xl font-black uppercase italic tracking-tighter leading-none mb-4">ANONYMOUS</h4>
+                    <p class="text-blue-500 text-xs font-bold mt-2 uppercase tracking-[0.5em]">A Short Film Project</p>
+                    <p class="max-w-2xl mx-auto text-zinc-500 text-sm mt-8 leading-relaxed">
+                        A cinematic exploration of mystery and storytelling. Experience the vision through high-impact visuals and creative direction.
+                    </p>
                 </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-3 glass-card aspect-video max-w-4xl mx-auto mb-4" data-aos="fade-up">
-                    <iframe src="https://www.youtube.com/embed/Fpa-umAsYCI" allowfullscreen></iframe>
-                </div>
-                <div class="glass-card aspect-[9/16]" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/lCrXZzDMNeU" allowfullscreen></iframe></div>
-                <div class="glass-card aspect-[9/16]" data-aos="fade-up" data-aos-delay="100"><iframe src="https://www.youtube.com/embed/SwnKzPmqE8o" allowfullscreen></iframe></div>
-                <div class="glass-card aspect-[9/16]" data-aos="fade-up" data-aos-delay="200"><iframe src="https://www.youtube.com/embed/ln4LOUcO_CM" allowfullscreen></iframe></div>
             </div>
         </div>
     </section>
 
-    <section id="motion" class="py-24 px-6 bg-zinc-950/40">
+    <section id="motion" class="py-24 px-6 bg-zinc-950/40 border-y border-white/5">
         <div class="max-w-6xl mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic" data-aos="fade-up">Motion Graphics Archive</h3>
+            <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic" data-aos="fade-up">Motion Graphics Archives</h3>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="glass-card aspect-video" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/xvq1vx7utaE" allowfullscreen></iframe></div>
                 <div class="glass-card aspect-video" data-aos="fade-up" data-aos-delay="100"><iframe src="https://www.youtube.com/embed/4k-Zrnzrx-o" allowfullscreen></iframe></div>
@@ -137,28 +132,49 @@
         </div>
     </section>
 
-    <section id="skills" class="py-24 px-6">
+    <section id="editing" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic" data-aos="fade-up">Creative Video Editing</h3>
+            
+            <div class="glass-card aspect-video max-w-4xl mx-auto mb-10" data-aos="zoom-in">
+                <iframe src="https://www.youtube.com/embed/Fpa-umAsYCI" allowfullscreen></iframe>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card aspect-[9/16]" data-aos="fade-up">
+                    <iframe src="https://www.youtube.com/embed/lCrXZzDMNeU" allowfullscreen></iframe>
+                </div>
+                <div class="glass-card aspect-[9/16]" data-aos="fade-up" data-aos-delay="100">
+                    <iframe src="https://www.youtube.com/embed/SwnKzPmqE8o" allowfullscreen></iframe>
+                </div>
+                <div class="glass-card aspect-[9/16]" data-aos="fade-up" data-aos-delay="200">
+                    <iframe src="https://www.youtube.com/embed/ln4LOUcO_CM" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6 bg-zinc-950/40">
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-            <div class="flex flex-col items-center md:items-start text-center md:text-left" data-aos="fade-right">
+            <div class="flex flex-col items-center md:items-start text-center md:text-left">
                 <div class="w-48 h-48 rounded-full border-8 border-blue-500/10 shadow-xl overflow-hidden mb-8" style="outline: 2px solid var(--accent);">
-                    <img src="pranav_dp.png" alt="Pranav Daundkar" class="w-full h-full object-cover">
+                    <img src="pranav_dp.png" alt="Pranav" class="w-full h-full object-cover">
                 </div>
                 <h2 class="text-4xl font-black uppercase italic tracking-tighter text-blue-500">Pranav Daundkar</h2>
-                <div class="w-12 h-1 bg-white mb-6"></div>
-                <p class="text-zinc-400 text-sm max-w-sm font-bold tracking-wide">Visual Architect specialized in High-Impact Visual Storytelling.</p>
+                <p class="text-zinc-400 text-sm mt-4 font-bold tracking-wide max-w-sm">Visual Architect specialized in Directing and Creative Editing.</p>
             </div>
-            <div class="glass-card p-10 space-y-10" data-aos="fade-left">
-                <div class="group"><div class="flex justify-between text-[10px] font-bold uppercase tracking-widest"><span>Premiere Pro</span></div><div class="bar-bg"><div class="bar-fill" style="--w: 95%;" data-percent="95%"></div></div></div>
-                <div class="group"><div class="flex justify-between text-[10px] font-bold uppercase tracking-widest"><span>After Effects</span></div><div class="bar-bg"><div class="bar-fill" style="--w: 92%;" data-percent="92%"></div></div></div>
-                <div class="group"><div class="flex justify-between text-[10px] font-bold uppercase tracking-widest"><span>CapCut</span><svg class="w-4 h-4 opacity-70 inline ml-2" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 12L24 5.5L17.5 1L11 7.5L4.5 1L0 5.5L6.5 12L0 18.5L4.5 23L11 16.5L17.5 23L24 18.5L17.5 12Z"/></svg></div><div class="bar-bg"><div class="bar-fill" style="--w: 90%;" data-percent="90%"></div></div></div>
-                <div class="group"><div class="flex justify-between text-[10px] font-bold uppercase tracking-widest"><span>Photoshop</span></div><div class="bar-bg"><div class="bar-fill" style="--w: 80%;" data-percent="80%"></div></div></div>
+            <div class="glass-card p-10 space-y-8" data-aos="fade-left">
+                <div class="group"><span>Premiere Pro</span><div class="bar-bg"><div class="bar-fill" style="--w: 95%;" data-percent="95%"></div></div></div>
+                <div class="group"><span>After Effects</span><div class="bar-bg"><div class="bar-fill" style="--w: 92%;" data-percent="92%"></div></div></div>
+                <div class="group"><span>CapCut</span><div class="bar-bg"><div class="bar-fill" style="--w: 90%;" data-percent="90%"></div></div></div>
+                <div class="group"><span>Photoshop</span><div class="bar-bg"><div class="bar-fill" style="--w: 80%;" data-percent="80%"></div></div></div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-32 px-6 border-t border-white/5">
         <div class="max-w-3xl mx-auto text-center">
-            <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-12 text-blue-500 italic" data-aos="fade-up">Let's Create Together</h3>
+            <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-12 text-blue-500 italic" data-aos="fade-up">Let's Create Together</h3>
             <div class="glass-card p-10 md:p-16">
                 <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                     <input type="text" placeholder="NAME" class="p-4 rounded-xl text-xs font-bold tracking-widest">
@@ -178,9 +194,11 @@
     <script>
         AOS.init({ duration: 1000, once: true });
         const menuBtn = document.getElementById('menu-btn'), closeBtn = document.getElementById('close-btn'), mobileMenu = document.getElementById('mobile-menu'), mobileLinks = document.querySelectorAll('.mobile-link');
+        
         menuBtn.onclick = () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; };
         const close = () => { mobileMenu.classList.remove('active'); document.body.style.overflow = 'auto'; };
-        closeBtn.onclick = close; mobileLinks.forEach(l => l.onclick = close);
+        closeBtn.onclick = close; 
+        mobileLinks.forEach(l => l.onclick = close);
     </script>
 </body>
 </html>
