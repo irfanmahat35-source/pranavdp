@@ -14,6 +14,7 @@
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: #050505; }
         ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 10px; }
+        
         .hero-title {
             font-family: 'Syncopate', sans-serif;
             background: linear-gradient(90deg, #fff, var(--accent), #fff);
@@ -21,6 +22,7 @@
             background-size: 200% auto; animation: shine 5s linear infinite;
         }
         @keyframes shine { to { background-position: 200% center; } }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(15px);
@@ -30,20 +32,26 @@
             overflow: hidden;
         }
         .glass-card:hover { border-color: var(--accent); transform: translateY(-8px); background: rgba(255, 255, 255, 0.04); }
+
         .bar-bg { width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; margin-top: 12px; }
         .bar-fill { height: 100%; background: var(--accent); box-shadow: 0 0 15px var(--accent); width: 0; border-radius: 10px; position: relative; }
         .aos-animate .bar-fill { width: var(--w); transition: 1.8s ease-out; }
         .bar-fill::after { content: attr(data-percent); position: absolute; right: 0; top: -25px; font-size: 10px; font-weight: 900; color: var(--accent); font-family: 'Syncopate', sans-serif; }
+
         #mobile-menu { transform: translateX(100%); transition: 0.5s ease; visibility: hidden; }
         #mobile-menu.active { transform: translateX(0); visibility: visible; }
+
         .btn-accent {
             background: var(--accent); color: #fff; padding: 14px 35px; 
             font-weight: 900; text-transform: uppercase; letter-spacing: 2px; 
             font-size: 11px; border-radius: 50px; transition: 0.3s; display: inline-block;
             box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+            cursor: pointer;
         }
         .btn-accent:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5); }
+        
         iframe { border-radius: 12px; border: none; width: 100%; height: 100%; }
+        
         .premium-border {
             position: relative;
             background: linear-gradient(45deg, #0f172a, #1e293b);
@@ -56,13 +64,13 @@
     <nav class="fixed top-0 w-full z-[100] px-6 py-5 flex justify-between items-center bg-black/80 backdrop-blur-2xl border-b border-white/5">
         <div class="text-2xl font-black italic uppercase tracking-tighter">PRANAV<span class="text-blue-500">.</span></div>
         <div class="hidden md:flex gap-10 text-[10px] uppercase font-bold tracking-[0.3em] opacity-70">
-            <a href="#hero" class="hover:text-blue-400">Home</a>
-            <a href="#showreel" class="hover:text-blue-400">Showreel</a>
-            <a href="#shortfilm" class="hover:text-blue-400">Short Film</a>
-            <a href="#motion" class="hover:text-blue-400">Motion</a>
-            <a href="#cgi-3d" class="hover:text-blue-400">3D Assets</a>
-            <a href="#editing" class="hover:text-blue-400">Editing</a>
-            <a href="#contact" class="hover:text-blue-400">Contact</a>
+            <a href="#hero" class="hover:text-blue-400 transition">Home</a>
+            <a href="#showreel" class="hover:text-blue-400 transition">Showreel</a>
+            <a href="#final-project" class="hover:text-blue-400 transition">Project</a>
+            <a href="#motion" class="hover:text-blue-400 transition">Motion</a>
+            <a href="#editing" class="hover:text-blue-400 transition">Editing</a>
+            <a href="#skills" class="hover:text-blue-400 transition">About</a>
+            <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
         </div>
         <button id="menu-btn" class="md:hidden text-white"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke-width="2" stroke-linecap="round"/></svg></button>
     </nav>
@@ -71,10 +79,10 @@
         <button id="close-btn" class="absolute top-8 right-8 text-white text-4xl">&times;</button>
         <a href="#hero" class="mobile-link">Home</a>
         <a href="#showreel" class="mobile-link">Showreel</a>
-        <a href="#shortfilm" class="mobile-link">Short Film</a>
+        <a href="#final-project" class="mobile-link">Final Project</a>
         <a href="#motion" class="mobile-link">Motion</a>
-        <a href="#cgi-3d" class="mobile-link">3D Assets</a>
         <a href="#editing" class="mobile-link">Editing</a>
+        <a href="#skills" class="mobile-link">About</a>
         <a href="#contact" class="mobile-link">Contact</a>
     </div>
 
@@ -97,8 +105,19 @@
         </div>
     </section>
 
-    <section id="shortfilm" class="py-24 px-6">
-        <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic">Narrative Feature</h3>
+    <section id="final-project" class="py-24 px-6 border-t border-white/5">
+        <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic">Academic Milestone</h3>
+        <div class="max-w-4xl mx-auto glass-card p-12 text-center" data-aos="fade-up">
+            <h2 class="hero-title text-4xl font-black uppercase italic tracking-tighter mb-4">Final Year Project</h2>
+            <p class="text-zinc-400 max-w-xl mx-auto text-[10px] leading-relaxed mb-10 uppercase tracking-[0.3em] font-bold">
+                Advanced exploration of visual storytelling and high-fidelity post-production workflows.
+            </p>
+            <a href="#" target="_blank" class="btn-accent px-16">View Project</a>
+        </div>
+    </section>
+
+    <section id="shortfilm" class="py-24 px-6 bg-zinc-950/40">
+        <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Narrative Feature</h3>
         <div class="max-w-5xl mx-auto glass-card p-3 shadow-2xl" data-aos="fade-up">
             <div class="aspect-video"><iframe src="https://www.youtube.com/embed/vx8ihMXQ1aE" allowfullscreen></iframe></div>
             <div class="p-8 text-center">
@@ -108,7 +127,7 @@
         </div>
     </section>
 
-    <section id="motion" class="py-24 px-6 bg-zinc-950/40 border-y border-white/5">
+    <section id="motion" class="py-24 px-6 border-y border-white/5">
         <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Motion Graphics Archives</h3>
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="glass-card aspect-video" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/xvq1vx7utaE" allowfullscreen></iframe></div>
@@ -120,7 +139,6 @@
     </section>
 
     <section id="cgi-3d" class="py-24 px-6">
-        <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-white italic">CGI & 3D Environments</h3>
         <div class="max-w-4xl mx-auto premium-border p-12 rounded-[30px] text-center" data-aos="zoom-out">
             <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-4">Master 3D Library</h2>
             <p class="text-zinc-400 max-w-xl mx-auto text-sm leading-relaxed mb-10 uppercase tracking-widest font-bold">Access exclusive 3D models and high-quality renders.</p>
@@ -130,12 +148,10 @@
 
     <section id="editing" class="py-24 px-6 bg-zinc-950/40">
         <h3 class="text-center text-[11px] font-black tracking-[1.2em] uppercase mb-16 text-blue-500 italic">Creative Video Editing</h3>
-        
         <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 mb-12">
             <div class="glass-card aspect-video" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/Fpa-umAsYCI" allowfullscreen></iframe></div>
             <div class="glass-card aspect-video" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/q3CaHr43Qj8" allowfullscreen></iframe></div>
-            
-
+        </div>
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
             <div class="glass-card aspect-[9/16]" data-aos="fade-up"><iframe src="https://www.youtube.com/embed/SwnKzPmqE8o" allowfullscreen></iframe></div>
             <div class="glass-card aspect-[9/16]" data-aos="fade-up" data-aos-delay="100"><iframe src="https://www.youtube.com/embed/ln4LOUc0_CM" allowfullscreen></iframe></div>
@@ -151,8 +167,20 @@
                     <img src="pranav_dp.png" alt="Pranav" class="w-full h-full object-cover">
                 </div>
                 <h2 class="text-4xl font-black uppercase italic tracking-tighter text-blue-500">Pranav Daundkar</h2>
-                <p class="text-zinc-400 text-sm mt-4 font-bold tracking-wide">Visual Architect specialized in Directing and Editing.</p>
+                <p class="text-zinc-400 text-sm mt-2 font-bold tracking-wide">Visual Architect specialized in Directing and Editing.</p>
+                
+                <div class="mt-8 space-y-3 text-[10px] uppercase tracking-[0.4em] font-black">
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <span class="text-blue-500">MOB:</span>
+                        <a href="tel:+919011600651" class="hover:text-blue-400 transition tracking-normal">+91 90116 00651</a>
+                    </div>
+                    <div class="flex items-center justify-center md:justify-start gap-4">
+                        <span class="text-blue-500">MAIL:</span>
+                        <a href="mailto:pranavdaundkardp@gmail.com" class="hover:text-blue-400 transition tracking-normal lowercase">pranavdaundkardp@gmail.com</a>
+                    </div>
+                </div>
             </div>
+            
             <div class="glass-card p-10 space-y-8" data-aos="fade-left">
                 <div class="group"><span>Premiere Pro</span><div class="bar-bg"><div class="bar-fill" style="--w: 95%;" data-percent="95%"></div></div></div>
                 <div class="group"><span>After Effects</span><div class="bar-bg"><div class="bar-fill" style="--w: 92%;" data-percent="92%"></div></div></div>
@@ -166,9 +194,9 @@
         <h3 class="text-[11px] font-black tracking-[1.2em] uppercase mb-12 text-blue-500 italic">Let's Create Together</h3>
         <div class="max-w-3xl mx-auto glass-card p-10 md:p-16" data-aos="fade-up">
             <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-                <input type="text" placeholder="NAME" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500">
-                <input type="email" placeholder="EMAIL" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500">
-                <textarea rows="4" placeholder="MESSAGE..." class="md:col-span-2 p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500 resize-none"></textarea>
+                <input type="text" placeholder="NAME" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500 text-white">
+                <input type="email" placeholder="EMAIL" class="p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500 text-white">
+                <textarea rows="4" placeholder="MESSAGE..." class="md:col-span-2 p-4 bg-white/5 border border-white/10 rounded-xl text-xs font-bold tracking-widest outline-none focus:border-blue-500 resize-none text-white"></textarea>
                 <button type="submit" class="btn-accent md:col-span-2">Send Message</button>
             </form>
         </div>
@@ -181,10 +209,24 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
-        const menuBtn = document.getElementById('menu-btn'), closeBtn = document.getElementById('close-btn'), mobileMenu = document.getElementById('mobile-menu'), mobileLinks = document.querySelectorAll('.mobile-link');
-        menuBtn.onclick = () => { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; };
-        const close = () => { mobileMenu.classList.remove('active'); document.body.style.overflow = 'auto'; };
-        closeBtn.onclick = close; mobileLinks.forEach(l => l.onclick = close);
+        
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        menuBtn.onclick = () => { 
+            mobileMenu.classList.add('active'); 
+            document.body.style.overflow = 'hidden'; 
+        };
+
+        const closeMenu = () => { 
+            mobileMenu.classList.remove('active'); 
+            document.body.style.overflow = 'auto'; 
+        };
+
+        closeBtn.onclick = closeMenu;
+        mobileLinks.forEach(link => link.onclick = closeMenu);
     </script>
 </body>
 </html>
